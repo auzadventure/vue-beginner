@@ -16,7 +16,9 @@
 		<router-link to="/one">Go to One</router-link>
 		<router-link to="/two">Go to Two</router-link>
 	</p>
-	<button-counter title='runners'></button-counter>
+	
+	
+		<say-hello></say-hello>	
 	
 	<router-view></router-view>
 	
@@ -24,10 +26,11 @@
 
 	
 <script src='./4_1 vue component.js'></script>
+<script src='./4_1 vue component parent.js'></script>
 <script>
 
 const One = { template: '<div>One</div>' }
-const Two = { template: '<div>This is page Two <button-counter></button-counter></div>' }
+const Two = { template: '<div>This is page Two </div>' }
 
 
 const routes = [
@@ -44,7 +47,8 @@ const app = new Vue({
   router,
   data: {
 	'msg':"This is a router"
-  }
+  },
+
   
   
 }).$mount('#app')

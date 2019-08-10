@@ -6,5 +6,8 @@ Vue.component('button-counter', {
       count: 0
     }
   },
-  template: '<button v-on:click="count++"> {{title}} You clicked me {{ count }} times.</button>'
+  template: `<div>
+				<button @click="count++">{{title}} You clicked me {{ count }} times.</button>
+				<button @click="$emit('hello')"> say hello to parent</button>
+			</div>`
 })

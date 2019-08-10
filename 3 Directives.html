@@ -14,7 +14,7 @@
 	<label>Input Your Gender (0 = male, 1 = female)</label>
 	<br>
 		<input type="text" v-model="gender">
-	
+		<button @click='add'>add</button>
 	<br> Gender: {{gender}}
 	
 	<h4 v-show='gender == 1' >I love Vue.js</h4>
@@ -23,15 +23,15 @@
 			<p>
 				I love vue.js. I will go for lionel's class
 			</p>
-	
-	
 	</div>
 	
 	<div v-else>
 		Ok No yy
 	</div>
 	
-	
+	<ol>
+		<li v-for="(interest,idex) in interests">{{interest}} {{idex}}</li>
+	</ol>
 	
 	
 	<ol style='margin-top:500px'>
@@ -56,6 +56,14 @@ var app = new Vue({
 		'msg':'Hello World',
 		'headerStyle': 'color:red',
 		'gender':'',
+		'interests': ['Running','Cycling','Swimming']
+
+	},
+	
+	'methods': {
+		add() {
+			alert(this.gender + "gender") 
+		}
 	}
 })
 
