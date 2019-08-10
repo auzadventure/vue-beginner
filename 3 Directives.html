@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+<div id='app'>
+	<h1 :style='headerStyle'>{{msg}}</h1>
+	
+	
+	<label>Input Your Gender (0 = male, 1 = female)</label>
+	<br>
+		<input type="text" v-model="gender">
+	
+	<br> Gender: {{gender}}
+	
+	<h4 v-show='gender == 1' >I love Vue.js</h4>
+	
+	<div class="" v-if="gender == 1">
+			<p>
+				I love vue.js. I will go for lionel's class
+			</p>
+	
+	
+	</div>
+	
+	<div v-else>
+		Ok No yy
+	</div>
+	
+	
+	
+	
+	<ol style='margin-top:500px'>
+		<li>v-bind</li>
+		<li>v-model</li>
+		<li>v-for</li>
+		<li>v-show</li>
+		<li>v-if</li>
+		<li>v-else-if, v-else</li>
+		
+		
+	</ol>
+</div>
+
+
+
+<script>
+
+var app = new Vue({
+	'el':'#app',
+	'data': {
+		'msg':'Hello World',
+		'headerStyle': 'color:red',
+		'gender':'',
+	}
+})
+
+</script>
+
+
+</body>
+</html> 
+

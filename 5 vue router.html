@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+	
+</head>
+
+<body>
+
+<div id='app'>
+	<h1>{{ msg }}</h1>
+
+	<p>
+		<router-link to="/one">Go to One</router-link>
+		<router-link to="/two">Go to Two</router-link>
+	</p>
+	<button-counter title='runners'></button-counter>
+	
+	<router-view></router-view>
+	
+</div>
+
+	
+<script src='./4_1 vue component.js'></script>
+<script>
+
+const One = { template: '<div>One</div>' }
+const Two = { template: '<div>This is page Two <button-counter></button-counter></div>' }
+
+
+const routes = [
+  { path: '/one', component: One },
+  { path: '/two', component: Two }
+]
+
+const router = new VueRouter({
+  routes 
+})
+
+
+const app = new Vue({
+  router,
+  data: {
+	'msg':"This is a router"
+  }
+  
+  
+}).$mount('#app')
+
+
+</script>
+
+
+</body>
+</html> 
+

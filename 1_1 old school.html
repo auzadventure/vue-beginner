@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+
+<body>
+
+<h1>Weclome to Vue.js 101</h1>
+<p>My first paragraph.</p>
+
+<input id='one' type="text"> +
+<input id='two' type="text"> 
+
+<button onclick="addTwo()">Add </button>
+
+<span id='result' >Result</span>
+
+<script>
+	
+function addTwo() {
+	alert('add');
+	var one = document.getElementById('one').value;
+	var two = document.getElementById('two').value;
+	
+	var result = parseInt(one) + parseInt(two); 
+	document.getElementById("result").innerHTML = result;
+
+}
+
+</script>
+
+
+</body>
+</html> 
