@@ -3,11 +3,10 @@ Vue.component('button-counter', {
   props: ['title'],
   data: function () {
     return {
-      count: 0
+      count: 0,
+	  style: "font-size:25px; color:red"
     }
   },
-  template: `<div>
-				<button @click="count++">{{title}} You clicked me {{ count }} times.</button>
-				<button @click="$emit('hello')"> say hello to parent</button>
+  template: `<div> <button class='btn' :style='style'>Counter </button>
 			</div>`
 })

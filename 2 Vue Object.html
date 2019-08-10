@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -10,16 +11,23 @@
 <div id='app'>
 	<h1>{{msg}}</h1>
 	<p>My first paragraph.</p>
+	
+	<div class="card">
+		<button class='btn btn-primary' :style="style">Submit Me</button>	
+		<button-counter></button-counter>
+	</div>
+	
 </div>
 
 
-
+<script src='./4_1 vue component.js'></script>
 <script>
 
 var app = new Vue({
 	'el':'#app',
 	'data': {
-		'msg':'Hello World'
+		'msg':'Hello World',
+		'style': "font-size:20px"
 	}
 })
 
