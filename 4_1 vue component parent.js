@@ -9,9 +9,9 @@ Vue.component('say-hello', {
   
   
   methods: {
-	sayHello() {
-		alert('hello');
-	}
+  	sayHello() {
+  		alert('hello');
+  	}
   },  
   
   template: `<div>

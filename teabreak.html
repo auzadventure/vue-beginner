@@ -18,16 +18,16 @@
 		<div class="panel panel-default">
 				<div class="panel-heading">Add Staff</div>
 				<div class="panel-body">
-				
+					<p></p>
 				</div>
 		</div>		
 		</div>
 	</div>
 
-	
+	{{go}}
 
 	<ol>
-		<li>Introduction and Setup 45min. LAMP Stack</li>
+		<li v-for="person in persons">{{person}}</li>
 		<li></li>
 
 	</ol>
@@ -37,7 +37,23 @@
 var app = new Vue({
 	'el':'#app',
 	'data': {
-		'title': "Tea Break App"
+		'title': "Tea Break App",
+		'persons':['john']
+	},
+	
+	methods: {
+		add() {
+			var name = this.name; 
+			this.persons.push(name);
+		}
+	
+	},
+	
+	computed: {
+	
+		isOk(): {
+			this.go = (this.name != 'mark');
+		}
 	}
 })
 
