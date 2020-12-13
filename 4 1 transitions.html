@@ -10,22 +10,19 @@
 	.fade-enter-active, .fade-leave-active {
 	  transition: opacity .5s;
 	}
-	.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+	.fade-enter, .fade-leave-to {
 	  opacity: 0;
 	}
 </style>
-<div id='app'>
-	
-	<button @click="toggle">Click Me</button>
 
-	<div class='fade-enter-active'> some text </div>
-	
-	
-  <transition name="fade">
-    <p v-if="show">I really love vue.js</p>
-  </transition>
-	
-	
+
+
+<div id='app'>
+	<button @click="toggle">Click Me</button>
+  
+  	<transition name="fade"> <!-- Adding the parent div!-->
+    	<p v-if="show">I really love vue.js</p>
+  	</transition>
 </div>
 
 
@@ -52,4 +49,3 @@ var app = new Vue({
 
 </body>
 </html> 
-

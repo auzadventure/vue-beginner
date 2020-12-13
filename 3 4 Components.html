@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+</head>
+
+<body>
+
+  <div id='app' style='padding:50px'>
+
+    <ol>
+      <li>What is a component</li>
+      <li>Create a component</li>
+      <li>Data and Props</li>
+      <li>--> 3 Child Component</li>
+    </ol>
+
+    <p>Now We insert our component</p>
+    <hr>
+
+    <hello-world name='john chan' tel='555'></hello-world>
+    <hello-world name='jacky chan' tel='666'></hello-world>
+    <hello-world name='william chan' tel='777'></hello-world>
+
+  </div>
+
+  <script src='3 4 Components.js'></script>
+  <script>
+    var app = new Vue({
+      'el':'#app',
+    })
+  </script>
+
+</body>
+</html> 

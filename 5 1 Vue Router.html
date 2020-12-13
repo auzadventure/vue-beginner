@@ -9,54 +9,45 @@
 
 <body>
 
-<div id='app'>
-	<h1>{{ msg }}</h1>
+	<div id='app'>
+		<h1>{{ msg }}</h1>
 
-	<p>
-		<router-link to="/one">Go to One</router-link>
-		<router-link to="/two">Go to Two</router-link>
-	</p>
-	
-	
+		<p>
+			<router-link to="/one">Go to One</router-link>
+			<router-link to="/two">Go to Two</router-link>
+		</p>
+
 		<say-hello></say-hello>	
-	
-	<router-view></router-view>
-	
-</div>
 
-	
-<script src='./4_1 vue component.js'></script>
-<script src='./4_1 vue component parent.js'></script>
-<script>
+		<router-view></router-view>
 
-const One = { template: '<div>One</div>' }
-const Two = { template: '<div>This is page Two </div>' }
+	</div>
 
+	<script src='./4_1 vue component.js'></script>
+	<script src='./4_1 vue component parent.js'></script>
+	<script>
 
-const routes = [
-  { path: '/one', component: One },
-  { path: '/two', component: Two }
-]
+		const One = { template: '<div>One</div>' }
+		const Two = { template: '<div>This is page Two </div>' }
 
-const router = new VueRouter({
-  routes 
-})
+		const routes = [
+		{ path: '/one', component: One },
+		{ path: '/two', component: Two }
+		]
 
+		const router = new VueRouter({
+			routes 
+		})
 
-const app = new Vue({
-  router,
-  data: {
-	'msg':"This is a router"
-  },
+		const app = new Vue({
+			router,
+			data: {
+				'msg':"This is a router"
+			},
 
-  
-  
-}).$mount('#app')
+		}).$mount('#app')
 
-
-</script>
-
+	</script>
 
 </body>
 </html> 
-
