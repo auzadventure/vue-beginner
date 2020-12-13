@@ -4,7 +4,7 @@ Vue.component('button-counter', {
   data: function () {
     return {
       count: 0,
-	  style: "font-size:25px; color:red"
+	  style: "font-size:10px; color:red"
     }
   },
   template: `<div> <button class='btn' :style='style'>Counter </button>
