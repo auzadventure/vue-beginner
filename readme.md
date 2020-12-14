@@ -20,3 +20,23 @@ Lionel the Tech Lead wants to get Teabreak drinks for his students. He is going 
 - Use V-model to insert into a list
 - Calculate the total amount of money collected
 - System to calculate who paid and got their drink  
+
+How To Add to a list 
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi"); 
+```
+
+###### Array Filter 
+
+```
+var ages = [32, 33, 16, 40];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+} 
+```

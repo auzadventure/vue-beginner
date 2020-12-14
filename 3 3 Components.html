@@ -20,7 +20,7 @@
   <p>Now We insert our component</p>
   <hr>
 
-  <hello-world name='john chan' tel='555'></hello-world>
+  <hello-world name='john chan2' tel='555'></hello-world>
   <hello-world name='jacky chan' tel='666'></hello-world>
   <hello-world name='william chan' tel='777'></hello-world>
 
@@ -31,13 +31,18 @@
 // Define a new component Parent Component hello world 
 Vue.component('hello-world', {
   props: ['name','tel'],
-  template: `<h1> Hello {{ name }} 
-            <telephone :tel='tel'></telephone>
-         </h1>`,
+  template: `<div class="card" :style='css'>
+            <div class="card-body">
+              <div class="card-heading"> Hello {{ name }} </div>
+              <h4> My Telephone Number </h4>
+              <telephone :tel='tel'></telephone>
+            </div>
+            </div>`,
   data: function () {
     return {
       name: '',
-      tel:''
+      tel:'',
+      css:'width:200px'
     }
   },
 
@@ -46,7 +51,7 @@ Vue.component('hello-world', {
 // Define a new CHILD component
 Vue.component('telephone', {
   props: ['tel'],
-  template: `<b>{{ tel }}</b>`,
+  template: `<b>{{ tel }}---</b>`,
   data: function () {
     return {
       tel: '',
