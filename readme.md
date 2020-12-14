@@ -16,5 +16,7 @@ Lionel the Tech Lead wants to get Teabreak drinks for his students. He is going 
 #### Build a list system to capture 
 
 - Name and Drink
+- Filter to prevent Name from getting a drink 
 - Use V-model to insert into a list
-- Update A variable using V-model 
+- Calculate the total amount of money collected
+- System to calculate who paid and got their drink  

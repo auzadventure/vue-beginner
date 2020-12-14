@@ -13,7 +13,7 @@
 		<p>My first paragraph.</p>
 		
 		<div class="card">
-			<button class='btn btn-primary' :style="style">Submit Me</button>	
+			<button @click='sayHello' class='btn btn-primary' :style="style">Submit Me</button>	
 			<button-counter></button-counter>
 		</div>
 		
@@ -26,8 +26,14 @@
 		var app = new Vue({
 			'el':'#app',
 			'data': {
-				'msg':'Hello World - My First Variable',
+				'msg':'Hello World - My First Variable ggg',
 				'style': "font-size:20px"
+			},
+
+			'methods': {
+				sayHello() {
+					alert('hello')
+				}
 			}
 		})
 
