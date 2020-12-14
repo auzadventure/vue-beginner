@@ -10,7 +10,7 @@
 
 <body>
 
-<div id='app'class="" style='padding:50px'>
+<div id='app' class="" style='padding:50px'>
 
 	<div class="row">
 		<div class="col-md-6">
@@ -24,8 +24,6 @@
 		</div>
 	</div>
 
-	{{go}}
-
 	<ol>
 		<li v-for="person in persons">{{person}}</li>
 		<li></li>
@@ -36,11 +34,11 @@
 <script>
 var app = new Vue({
 	'el':'#app',
-	'data': {
-		'title': "Tea Break App",
-		'persons':['john']
+	data: {
+		title: "Tea Break App",
+		persons:['john']
 	},
-	
+	/*
 	methods: {
 		add() {
 			var name = this.name; 
@@ -55,6 +53,7 @@ var app = new Vue({
 			this.go = (this.name != 'mark');
 		}
 	}
+	*/
 })
 
 </script>
